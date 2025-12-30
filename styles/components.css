@@ -227,6 +227,49 @@ pre {
     transform: translateY(-2px);
 }
 
+/* Education Section */
+.education-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.edu-icon {
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.edu-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.edu-place {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.edu-degree {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.edu-year {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* Project Cards */
 .project-card {
     padding: 0;
