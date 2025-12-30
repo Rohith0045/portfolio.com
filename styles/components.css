@@ -74,6 +74,76 @@
     animation: pulseGlow 8s infinite;
 }
 
+/* Hero Image & Carousel */
+.hero-image-container {
+    position: relative;
+    width: 350px;
+    /* Fixed dimensions for stacking */
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
+}
+
+.hero-profile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: imageCycle 30s infinite;
+}
+
+/* Staggered delays for 3 images over 30s cycle (10s each) */
+/* Staggered delays for 3 images over 30s cycle (10s each) */
+.img-1 {
+    animation-delay: 0s;
+    opacity: 1;
+
+    /* Start visible */
+    object-position: center 20%;
+}
+
+.img-2 {
+    animation-delay: 10s;
+    object-position: center top;
+}
+
+.img-3 {
+    animation-delay: 20s;
+    object-position: center top;
+}
+
+@keyframes imageCycle {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    30% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    33% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    97% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
 .hero-content h1 {
     font-size: 4rem;
     line-height: 1.1;
