@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initScrollReveal();
     initSmoothScroll();
+    initFormRedirect(); // Initialize redirect logic
 });
 
 /* -------------------
@@ -30,12 +31,12 @@ function initNavigation() {
         // modifying CSS via JS for quick toggle if class not present
         if (navLinks.style.display === 'flex') {
             navLinks.style.display = 'none'; // reset to CSS default or hide
-             // Actually, checking CSS query relies on class
+            // Actually, checking CSS query relies on class
         } else {
-           // For simple implementation without extra CSS classes:
-           // We need to support the 'active' state in CSS or here.
+            // For simple implementation without extra CSS classes:
+            // We need to support the 'active' state in CSS or here.
         }
-        
+
         // Better approach: toggle a class and style that class in CSS
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('active');
@@ -84,7 +85,7 @@ function initSmoothScroll() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 // Account for fixed header
@@ -99,4 +100,14 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+/* -------------------
+   Form Redirect Logic
+   ------------------- */
+function initFormRedirect() {
+    const redirectInput = document.getElementById('redirect-url');
+    if (redirectInput) {
+        redirectInput.value = window.location.href;
+    }
 }
